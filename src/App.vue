@@ -7,7 +7,7 @@ import axios from "axios";
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 const users = ref([]);
 onMounted(() => {
-    axios.get("http://localhost:3000/api/users").then((res) => {
+    axios.get("/api/users").then((res) => {
         console.log(res);
         users.value = res.data;
     });
